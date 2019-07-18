@@ -1,0 +1,70 @@
+// stylelint-disable declaration-no-important
+
+// Margin and Padding for rtl version
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $prop, $abbrev in (margin: m, padding: p) {
+            @each $size, $length in $spacers {
+                .#{$abbrev}r#{$infix}-#{$size} {
+                    #{$prop}-left: $length !important;
+                    #{$prop}-right: 0 !important;
+                }
+                
+                .#{$abbrev}l#{$infix}-#{$size} {
+                    #{$prop}-right: $length !important;
+                    #{$prop}-left: 0 !important;
+                }
+            }
+        }
+ 
+        .mr#{$infix}-auto {
+	      	margin-left: auto !important;
+	      	margin-right: 0 !important;
+	    }
+	    .ml#{$infix}-auto {
+	      	margin-right: auto !important;
+	      	margin-left: 0 !important;
+	    }
+	    .mx#{$infix}-auto {
+	    	margin-right: auto !important;
+	      	margin-left: auto !important;
+	    }
+    }
+}
+
+// Responsive floating
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .float#{$infix}-left  { @include float-right; }
+    .float#{$infix}-right { @include float-left; }
+    .float#{$infix}-none  { @include float-none; }
+  }
+}
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: right !important; }
+    .text#{$infix}-right  { text-align: left !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+}
+
+//
+// Border
+//
+
+.border-right   { border-left: $border-width solid $border-color !important; border-right: 0 !important; }
+.border-left    { border-right: $border-width solid $border-color !important; border-left: 0 !important; }
+
+.border-right-0  { border-left: 0 !important; }
+.border-left-0   { border-right: 0 !important; }

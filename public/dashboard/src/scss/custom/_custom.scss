@@ -1,0 +1,52 @@
+//Theme core files
+@import 'core/theme-colors/theme-colors';
+@import 'core/theme-colors/dark-theme';
+@import 'core/layout/layout';
+@import 'core/topbar/topbar';
+@import 'core/sidebar/sidebar';
+@import 'core/customizer/customizer';
+@import 'core/animation';
+
+// Theme pages
+@import 'pages/authentication/authentication';
+@import 'pages/inbox/emails';
+@import 'pages/dashboards/ample';
+@import 'pages/forms/typeahead';
+@import 'pages/gallery-usercard/gal-card';
+@import 'pages/timeline/timeline';
+@import 'pages/forms/form-material'; 
+
+/*******************************/
+// Bootstrap overrides
+/*******************************/
+@import 'mixins/background-variant';
+@import 'utilities/backgrounds';
+@import 'utilities/floating';
+@import 'text';
+@import 'card';
+@import 'type';
+@import 'badge';
+@import 'reboot';
+@import 'perfect-scrollbar';
+@import 'spinner';
+@import 'buttons';
+@import 'topbar-dd';
+@import 'chat-widget';
+@import 'comments';
+@import 'feeds';
+@import 'to-do-list';
+@import 'activity-timeline';
+@import 'navs';
+@import 'progress';
+@import 'globle';
+@import 'input-group';
+
+/*******************************/
+// For RTL Demo
+/*******************************/
+@import 'rtl/rtl';
+
+/*******************************/
+// For Horizontal Demo
+/*******************************/
+@import 'horizontal/horizontal';

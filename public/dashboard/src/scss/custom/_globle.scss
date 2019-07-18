@@ -1,0 +1,66 @@
+html body {
+  .jqstooltip,
+  .flotTip {
+    width: auto !important;
+    height: auto !important;
+    background: $gray-900;
+    color: $white;
+    padding: 5px 10px;
+  }
+}
+
+body .jqstooltip {
+  border-color: transparent;
+  border-radius: 60px;
+}
+
+// Tooltip for the chartist chart charts
+.chartist-tooltip {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  border-radius: $border-radius;
+  padding: 10px 20px;
+  background: $info;
+  color: $white;
+  ext-align: center;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.chartist-tooltip:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: $info;
+}
+
+.chartist-tooltip.tooltip-show {
+  opacity: 1;
+}
+
+.ct-area,
+.ct-line {
+  pointer-events: none;
+}
+
+.c3-chart-arcs-title {
+  fill: $text-muted;
+}
+
+.c3 line,
+.c3 path {
+  stroke: $gray-200;
+}
+.c3-chart-arc path {
+  stroke: transparent;
+}

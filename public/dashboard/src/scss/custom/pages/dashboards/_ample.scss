@@ -1,0 +1,513 @@
+// scrollbar
+.scrollable {
+    position: relative;
+}
+
+// ========================================================================
+// PRODUCTS YEARLY SALES Charts
+// ========================================================================
+#ct-visits {
+    position: relative;
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: $danger;
+    }
+    .ct-series-b .ct-line,
+    .ct-series-b .ct-point {
+        stroke: $info;
+    }
+    .ct-series-a .ct-area {
+        fill: $danger;
+        fill-opacity: 0.1;
+    }
+    .ct-series-b .ct-area {
+        fill: $info;
+        fill-opacity: 0.1;
+    }
+    .ct-line {
+        stroke-width: 2px;
+    }
+}
+
+// ========================================================================
+// PRODUCTS YEARLY SALES Charts
+// ========================================================================
+#ct-visits1 {
+    position: relative;
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: $gray-600;
+    }
+    .ct-series-b .ct-line,
+    .ct-series-b .ct-point {
+        stroke: $info;
+    }
+    .ct-series-a .ct-area {
+        fill: $gray-600;
+        fill-opacity: 0.1;
+    }
+    .ct-series-b .ct-area {
+        fill: $info;
+        fill-opacity: 0.1;
+    }
+    .ct-line {
+        stroke-width: 2px;
+    }
+}  
+
+// ========================================================================
+// Week Sales Chart
+// ========================================================================
+#ct-daily-sales {
+    .ct-series-a .ct-bar {
+        stroke: rgba(255, 255, 255, 0.7);
+        stroke-width: 10px;
+    }
+}
+
+// ========================================================================
+// Sunday
+// ========================================================================
+@keyframes dasharray-craziness {
+    0% {
+        stroke-dasharray: 5px;
+    }
+    50% {
+        stroke-dasharray: 6px;
+    }
+    100% {
+        stroke-dasharray: 7px;
+    }
+}
+
+#ct-weather{
+    position: relative;
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: $white;
+        stroke-shadow: 3px 10px 10px #000;
+    }
+    .ct-series-a .ct-area {
+        fill: none;
+    }
+    .ct-grid {
+        stroke: rgba(255, 255, 255, 0.2);
+        stroke-dasharray: 0px;
+    }
+    .ct-series-a .ct-line {
+        animation: dasharray-craziness 2s infinite;
+    }
+}
+
+#morris-area-chart2 text{
+    display: none;
+}
+
+.nav-tabs.manage-tabs{
+    border-bottom: 0 !important;
+    .nav-item{
+        margin-bottom: -1px;
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin: 0;
+        text-align: center;
+        flex: 1;
+    }
+    .nav-link{
+        position: relative;
+        background: $info !important;
+        color: rgba($white, 0.6) !important;
+        font-weight: 400;
+        border: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding: 20px;
+        text-transform: uppercase;
+        &:hover{
+            color: rgba($white, 0.6);
+        }
+    }
+    .nav-item.show .nav-link, 
+    .nav-link.active{
+        color: rgba($white, 1) !important;
+        background: $info !important;
+        &::after{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            width: 0;
+            height: 0;
+            border: solid transparent;
+            border-width: 10px;
+            border-top-color: $info;
+            content: '';
+            pointer-events: none;
+        }
+    }
+}
+
+.manage-table{
+    thead{
+        tr{
+            th{
+                text-transform: uppercase;
+                color: $gray-700;
+                font-weight: 500;
+            }
+        }
+    }
+    .sml-pd{
+        padding: 5px;
+    }
+    tr.advanced-table{
+        border: 2px solid $border-color;
+        color: $gray-600;
+        &.active {
+            border: 2px solid $info !important;
+        }
+        td {
+            vertical-align: middle;
+            font-size: 16px;
+            background: $white;
+            font-weight: 300;
+        }
+    }
+}
+
+.user-table{
+    thead{
+        color: $gray-700;
+    }
+    tbody{
+        tr{
+            background-color: inherit;
+            &:hover{
+                background-color: $gray-100;
+            }
+            td{
+                vertical-align: middle;
+            }
+            .category-select{
+                max-width: 150px;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.chat-list{
+    li{
+        .chat-icon{
+            display: none;
+        }
+        &:hover{
+            .chat-icon{
+                display: block;
+            }
+        }
+    }
+}
+
+// ========================================================================
+// Dashboard-2
+// ========================================================================
+
+.demo-container .flot-x-axis,
+.demo-container .flot-text {
+    display: none;
+}
+
+.demo-placeholder {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+#ct-main-bal{
+    position: relative;
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: none;
+        fill: $info;
+        fill-opacity: 0.5;
+    }
+    .ct-series-b .ct-line,
+    .ct-series-b .ct-point {
+        stroke: $info;
+        stroke-width: 1px;
+        animation: dasharray-craziness 2s infinite;
+        opacity: 0.8;
+    }
+    .ct-series-b .ct-area {
+        fill: $info;
+        fill-opacity: 0.2;
+    }
+}
+
+#ct-bar-chart{
+    position: relative;
+    .ct-series-a .ct-bar {
+        stroke: $info;
+        stroke-width: 7px;
+    }
+}
+
+#diagram {
+    margin: 0 auto;
+    width: 250px;
+    padding-top: 60px;
+    height: 341px;
+    circle {
+        fill: $white;
+    }
+    text {
+        fill: $body-color;
+    }
+}
+
+.get {
+    display: none;
+}
+
+#ct-extra {
+    position: relative;
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: $white;
+        stroke-shadow: 3px 10px 10px #000;
+    }
+    .ct-series-a .ct-area {
+        fill: none;
+    }
+}
+
+#ct-extra {
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: $info;
+        animation: dasharray-craziness 0.5s infinite;
+    }
+    .ct-grid {
+        stroke: rgba(0, 0, 0, 0.2);
+        stroke-dasharray: 2px;
+    }
+}
+
+.mt-gauge {
+    background: $white;
+    height: 290px;
+} 
+
+.my-bar-chart{
+    .ct-series-a .ct-bar{
+        stroke: $info;
+    }
+    .ct-series-b .ct-bar{
+        stroke: $success;
+    }
+}
+
+.weight-border{
+    border-top: 2px solid $success;
+    height: 2px;
+    width: 100px;
+    display: inline-block;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 1.57rem;
+}
+
+@media (max-width: 767px) {
+    .bottom-text{
+        right: 1.57rem;
+    }
+}
+.calendar-schedule-table{
+    width: 100%;
+    td {
+        padding: 17px 13px;
+        text-align: center;
+        font-weight: 400;
+        .month-option {
+            text-align: left;
+            color: $white;
+            font-weight: 400;
+            padding-left: 30px;
+        }
+        &.cal-active {
+            border-radius: 60px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.mailbox-widget {
+    .custom-tab {
+        .nav-item {
+            .nav-link {
+                border: 0px;
+                color: $white;
+                border-bottom: 3px solid transparent;
+                &:hover {
+                    background: transparent;
+                    opacity: 0.5;
+                }
+                &.active {
+                    background: none;
+                    color: $white;
+                    border-bottom: 3px solid $success;
+                }
+            }
+        }
+    }
+}
+
+#weeksales-bar{
+    .ct-series-a .ct-bar{
+        stroke:rgba(44, 171, 227,1);
+        stroke-width: 15px;
+    }
+    .ct-chart-bar .ct-label.ct-horizontal.ct-end{
+        font-weight: 500;
+        color: rgba(0,0,0,0.9);
+    }
+} 
+
+.weather-report{
+    .weather-type{
+        color: $gray-200;
+    }
+    &.active{
+        border-bottom: 2px solid $danger;
+        .weather-type{
+            color: $danger;
+        }
+    }
+}
+
+// ========================================================================
+// Dashboard-3
+// ========================================================================
+
+#ct-city-wth{
+    position: relative;
+    .ct-label {
+        color: $white;
+    }
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+        stroke: rgba(255, 255, 255, 0.2);
+    }
+    .ct-series-a .ct-area {
+        fill: none;
+    }
+}
+
+// For Bootstrap Datepicker
+.datepicker .day,
+.datepicker .dow {
+    padding: 5px 10px;
+}
+
+/*******************
+Footable Table
+******************/
+
+#demo-foo-accordion .open > .dropdown-menu {
+    display: block;
+}
+
+#demo-foo-accordion2 .open > .dropdown-menu {
+    display: block;
+}
+
+#footable-addrow .open > .dropdown-menu {
+    display: block;
+}
+
+table.footable{
+    thead{
+        tr.footable-filtering{
+            th{
+                ul.dropdown-menu{
+                    li{
+                        a.checkbox{
+                            padding-left: 0;
+                        }
+                        a.checkbox input[type=checkbox]{
+                            position: relative;
+                            margin-right: 10px;
+                            margin-left: -20px;
+                            left: 0;
+                            opacity: 1;
+                        }
+                        .checkbox label::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.footable .pagination{
+    li{
+        a {
+            position: relative;
+            display: block;
+            padding: .5rem .75rem;
+            margin-left: -1px;
+            line-height: 1.25;
+            color: #0275d8;
+            background-color: $white;
+            border: 1px solid #ddd;    
+        }
+        &.active a{
+            z-index: 2;
+            color: $white;
+            background-color: $info;
+            border-color: $info;
+        }
+    }
+    li.disabled {
+        a {
+            color: $gray-200;
+            pointer-events: none;
+            cursor: not-allowed;
+            background-color: $white;
+            border-color: $gray-100;
+        }
+    }
+    li:first-child {
+        a {
+            margin-left: 0;
+            border-bottom-left-radius: .25rem;
+            border-top-left-radius: .25rem;
+        }
+    }
+}
+
+.primary-carousel{
+    .p-img{
+        height: 406px;
+    }
+    .read-more{
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+// dashboard -4 
+
+.recent-table{
+    th{
+        font-weight: 500;
+    }
+}

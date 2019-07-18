@@ -1,0 +1,13 @@
+.order-modal {
+	max-width: 800px;
+}
+.order-modal .form-control {
+
+}
+
+#viewUserModal .modal-dialog,
+#viewTaskModal .modal-dialog
+ {
+	width: 80%;
+	max-width: 80%;
+}

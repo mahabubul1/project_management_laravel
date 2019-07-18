@@ -1,0 +1,102 @@
+/*
+ * Responsive CSS
+ * Theme Name   : Theme name
+ * Author       : MD. Abu Ahsan Basir
+ * Description  : Theme description
+ * Version      : 1.0
+ */
+
+/*
+=====================================================
+                    Table of contents
+=====================================================
+
+Example: Type 'ctrl+f' and then 'Portfolio' to jump to the
+ "Portfolio" section. Click 'find' if needed.
+
+1.Header
+2.About Me
+3.Projects
+4.Services
+5.Clients
+6.Portfolio
+7.Blog
+8.Partners
+9.Contact
+10.Map
+11.Footer
+12.Owl Carousel
+*/
+@media (max-width: 992px){
+	
+}
+
+
+/*Xtra Large*/
+@media (min-width: 1600px){
+    
+}
+/*Large Device*/
+@media(min-width:1200px){
+
+}
+/*Medium Device*/
+@media(min-width:992px) and (max-width:1200px){
+
+}
+/*Small Device*/
+@media(min-width:768px) and (max-width:991px){
+
+}
+@media(max-width: 991px){
+   
+}
+/*Xtra Small Device*/
+@media(max-width:767px){
+    
+}
+@media(min-width: 320px) and (max-width:767px){
+	.navbar {
+		min-height: 60px;
+		height: auto;
+	}
+	.navbar-brand {
+		width: 100%;
+		height: 60px;
+	}
+	.collapse-sidebar {
+		height: 60px;
+	}
+	
+	.navbar-right {
+		height: 60px;
+		margin-left: 0px !important;
+		display: inline-block;
+	}
+	.navbar-right > li {
+		float: left;
+		height: 100%;
+	}
+	.navbar-nav .dropdown-menu {
+		position: absolute;
+	}
+	.wrapper {
+		margin-top: 120px;
+	}
+    .sidebar.active {
+		margin-left: -200px;
+	}
+	.sidebar {
+		margin-left: 0px;
+		height: calc(100vh - 120px);
+		
+	}
+	.sidebar-footer {
+		bottom: 60px;
+	}
+	.content,
+	.content.remve-sidebar,
+	.content.add-right-sidebar {
+		margin: 0px;
+	}
+}

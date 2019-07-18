@@ -1,0 +1,336 @@
+/*============================================================== 
+Form Material page
+ ============================================================== */
+/*Material inputs*/
+.form-material .form-group {
+  overflow: hidden;
+}
+
+.form-material .form-control {
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center bottom, center calc(100% - 1px);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  padding: 0;
+  transition: background 0s ease-out 0s;
+}
+
+.form-material .form-control,
+.form-material .form-control.focus,
+.form-material .form-control:focus {
+  background-image: linear-gradient($themecolor, $themecolor),
+    linear-gradient($border-color, $border-color);
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  float: none;
+}
+
+.form-material .form-control.focus,
+.form-material .form-control:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: 0 none;
+  transition-duration: 0.3s;
+}
+
+.form-control-line .form-group {
+  overflow: hidden;
+}
+.form-control-line .form-control {
+  border: 0px;
+  border-radius: 0px;
+  padding-left: 0px;
+  border-bottom: 1px solid $border-color;
+  &:focus {
+    border-bottom: 1px solid $themecolor;
+  }
+}
+
+.form-control-line {
+  .form-control.form-control-success:focus {
+    border-bottom: 1px solid $success;
+  }
+  .form-control.form-control-warning:focus {
+    border-bottom: 1px solid $warning;
+  }
+  .form-control.form-control-danger:focus {
+    border-bottom: 1px solid $danger;
+  }
+}
+
+.form-control-danger,
+.form-control-success,
+.form-control-warning {
+  padding-right: 2.25rem;
+  background-repeat: no-repeat;
+  background-position: center right 0.5625rem;
+  -webkit-background-size: 1.125rem 1.125rem;
+  background-size: 1.125rem 1.125rem;
+}
+
+.has-success .col-form-label,
+.has-success .custom-control,
+.has-success .form-check-label,
+.has-success .form-control-feedback,
+.has-success .form-control-label {
+  color: $success;
+}
+
+.has-success .form-control {
+  border-color: $success;
+}
+
+.has-warning .col-form-label,
+.has-warning .custom-control,
+.has-warning .form-check-label,
+.has-warning .form-control-feedback,
+.has-warning .form-control-label {
+  color: $warning;
+}
+
+.has-warning .form-control {
+  border-color: $warning;
+}
+
+.has-danger .col-form-label,
+.has-danger .custom-control,
+.has-danger .form-check-label,
+.has-danger .form-control-feedback,
+.has-danger .form-control-label {
+  color: $danger;
+}
+
+.has-danger .form-control {
+  border-color: $danger;
+}
+
+.has-warning .bar:before,
+.has-warning .bar:after {
+  background: $warning;
+}
+
+.has-success .bar:before,
+.has-success .bar:after {
+  background: $success;
+}
+
+.has-error .bar:before,
+.has-error .bar:after {
+  background: $danger;
+}
+
+.has-warning .form-control:focus ~ label,
+.has-warning .form-control:valid ~ label {
+  color: $warning;
+}
+
+.has-success .form-control:focus ~ label,
+.has-success .form-control:valid ~ label {
+  color: $success;
+}
+
+.has-error .form-control:focus ~ label,
+.has-error .form-control:valid ~ label {
+  color: $danger;
+}
+
+.has-feedback label ~ .t-0 {
+  top: 0;
+}
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+  border: 1px solid $danger;
+}
+.form-group.validate input,
+.form-group.validate select,
+.form-group.validate textarea {
+  border: 1px solid $success;
+}
+.form-group.error .help-block {
+  ul {
+    padding: 0px;
+    color: $danger;
+    li {
+      list-style: none;
+    }
+  }
+}
+.form-group.issue .help-block {
+  ul {
+    padding: 0px;
+    color: $warning;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.form-control-line {
+    border-left: 0 none;
+    border-radius: 0;
+    border-right: 0 none;
+    border-top: 0 none;
+    box-shadow: none;
+    padding-left: 0;
+}
+
+.floating-labels .form-group {
+    position: relative;
+}
+
+.floating-labels .form-control {
+    font-size: 20px;
+    padding: 10px 10px 10px 0;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $gray-200;
+}
+
+.floating-labels select.form-control > option {
+    font-size: 14px;
+}
+
+.floating-labels .form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.floating-labels label {
+    color: $body-color;
+    font-size: 16px;
+    position: absolute;
+    cursor: auto;
+    font-weight: 400;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.floating-labels .form-control:focus ~ label,
+.floating-labels .form-control:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: $primary;
+}
+
+.floating-labels .bar {
+    position: relative;
+    display: block;
+}
+
+.floating-labels .bar:before,
+.floating-labels .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: $primary;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.floating-labels .bar:before {
+    left: 50%;
+}
+
+.floating-labels .bar:after {
+    right: 50%;
+}
+
+.floating-labels .form-control:focus ~ .bar:before,
+.floating-labels .form-control:focus ~ .bar:after {
+    width: 50%;
+}
+
+.floating-labels .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.floating-labels .input-lg ~ label,
+.floating-labels .input-lg {
+    font-size: 24px;
+}
+
+.floating-labels .input-sm ~ label,
+.floating-labels .input-sm {
+    font-size: 16px;
+}
+
+.floating-labels{
+  .has-success {
+    .form-control {
+      border-color: $success;
+      box-shadow: none !important;
+    }
+  }
+  .has-success.focused{
+    .form-control:focus{
+      border-color: $success !important;
+    }
+    label{
+      color: $success;
+    }
+    .bar:before,
+    .bar:after {
+      background: $success;
+    }
+  }
+  .has-warning {
+      .form-control {
+          border-color: $warning;
+          box-shadow: none !important;
+      }
+  }
+  .has-warning.focused{
+    .form-control:focus{
+      border-color: $warning !important;
+    }
+    label{
+      color: $warning;
+    }
+    .bar:before,
+    .bar:after {
+      background: $warning;
+    }
+  }
+  .has-error {
+      .form-control {
+        border-color: $danger;
+        box-shadow: none !important;
+      }
+  }
+  .has-error.focused{
+    .form-control:focus{
+      border-color: $danger !important;
+    }
+    label{
+      color: $danger;
+    }
+    .bar:before,
+    .bar:after {
+      background: $danger;
+    }
+  }
+  .form-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+  }
+}

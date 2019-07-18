@@ -1,0 +1,27 @@
+.nav-tabs {
+  .nav-link {
+    color: $body-color;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.tab-content {
+  background: $white;
+  &.tabcontent-border {
+    border: 1px solid $border-color;
+    border-top: 0px;
+  }
+}
+.customtab {
+  .nav-link {
+    border: 0px;
+    padding: 15px 20px;
+    border-bottom: 2px solid $border-color;
+    &:hover,
+    &.active {
+      border-color: $primary;
+    }
+  }
+}
